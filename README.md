@@ -59,12 +59,6 @@ Esta aplicación permite registrar solicitudes (incidentes, requerimientos, cons
 - **Sustituible**: Cambiar de persistencia (InMemory → H2 → PostgreSQL) sin tocar lógica
 - **Clara**: Separación de responsabilidades por capas
 
-#### ✅ Por qué Records en QueriesUseCase?
-
-- **Inmutabilidad**: DTOs seguros y thread-safe
-- **Concisión**: Menos boilerplate
-- **Java 14+**: Aprovecha características modernas del lenguaje
-
 ---
 
 ## 🚀 Ejecución
@@ -215,47 +209,20 @@ motor-priorizacion-prueba-tecnica/
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── app/                    # Componente principal
+│   │   ├── app/                    # Next.js App Router
+│   │   │   ├── layout.js           # Layout raíz
+│   │   │   ├── page.js             # Página principal
+│   │   │   └── globals.css         # Estilos globales
 │   │   ├── components/             # Componentes reutilizables
 │   │   ├── const/                  # Constantes
 │   │   ├── hooks/                  # Custom hooks
 │   │   ├── lib/                    # Cliente API
 │   │   └── templates/              # Layouts
-│   ├── index.html
 │   ├── package.json
-│   └── vite.config.js
+│   └── next.config.js              # Configuración Next.js
 │
 └── README.md
 ```
-
----
-
-## 🎯 Criterios Cubiertos
-
-### Backend
-- ✅ Java + Spring Boot
-- ✅ API REST funcional
-- ✅ Endpoints: crear, listar, listar priorizadas
-- ✅ Persistencia en memoria (thread-safe)
-- ✅ Separación de capas (Clean Architecture)
-- ✅ Motor de reglas extensible (Strategy Pattern)
-- ✅ Dominio limpio (independiente de frameworks)
-
-### Frontend
-- ✅ React con Vite
-- ✅ Formulario de creación
-- ✅ Lista ordenada por prioridad
-- ✅ Muestra prioridad calculada
-- ✅ Componentización clara
-- ✅ Custom hooks para lógica
-- ✅ Cliente API centralizado
-
-### Arquitectura
-- ✅ Clean Architecture simplificada
-- ✅ DDD Light (entidades con validaciones)
-- ✅ Strategy Pattern para reglas
-- ✅ Código mantenible y extensible
-- ✅ Sin sobre-ingeniería
 
 ---
 
@@ -272,15 +239,6 @@ motor-priorizacion-prueba-tecnica/
 - Validaciones con Bean Validation
 - Manejo de excepciones centralizado
 
----
-
-## 👨‍💻 Autor
-
-Implementado como prueba técnica para demostrar:
-- Criterio arquitectónico
-- Buenas prácticas de diseño
-- Código limpio y mantenible
-- Equilibrio entre simplicidad y calidad
 
 ---
 
@@ -291,13 +249,3 @@ Implementado como prueba técnica para demostrar:
 3. **Sin validaciones exhaustivas**: Se priorizó claridad sobre validaciones complejas.
 4. **Java 17+**: Se usan features modernas (Records, Switch Expressions).
 5. **React sin state management**: Para este alcance, `useState` + custom hooks es suficiente.
-
----
-
-## 🚀 ¿Qué Demostramos?
-
-✅ **Criterio profesional**: Arquitectura empresarial sin sobre-ingeniería  
-✅ **Extensibilidad**: Fácil agregar reglas, cambiar persistencia  
-✅ **Claridad**: Código autodocumentado y bien estructurado  
-✅ **SOLID**: Principios aplicados pragmáticamente  
-✅ **Fullstack competente**: Backend y Frontend funcionales e integrados

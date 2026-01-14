@@ -16,23 +16,25 @@ backend/
 │   └── PriorityRule.java
 ├── providers/                  → SolicitudRepository (interfaz)
 ├── PrioritizationApplication.java
-└── pom.xml
+└── build.gradle
 ```
 
 ## Tecnologías
 
 - Java 17+
 - Spring Boot 3.2.0
-- Maven 3.8+
+- Gradle 8+ (incluye Gradle Wrapper)
 
 ## Ejecutar
 
 ```bash
 # Compilar
-mvn clean install
+.\gradlew.bat build -x test    # Windows
+./gradlew build -x test        # Linux/Mac
 
 # Ejecutar
-mvn spring-boot:run
+.\gradlew.bat bootRun          # Windows
+./gradlew bootRun              # Linux/Mac
 ```
 
 La aplicación arrancará en: **http://localhost:8080**
