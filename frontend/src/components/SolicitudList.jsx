@@ -87,24 +87,24 @@ function SolicitudCard({ solicitud, posicion }) {
       
       <div className="card-body">
         <div className="info-row">
-          <span className="label">ID:</span>
+          <span className="label">ID: </span>
           <span className="value">{s.id}</span>
         </div>
         
         <div className="info-row">
-          <span className="label">Usuario:</span>
+          <span className="label">Usuario: </span>
           <span className="value">{s.usuario}</span>
         </div>
         
         <div className="info-row">
-          <span className="label">Prioridad Manual:</span>
+          <span className="label">Prioridad Manual: </span>
           <span className="value">
             {'⭐'.repeat(s.prioridadManual)} ({s.prioridadManual}/5)
           </span>
         </div>
         
         <div className="info-row">
-          <span className="label">Creada:</span>
+          <span className="label">Creada: </span>
           <span className="value">{formatFecha(s.fechaCreacion)}</span>
         </div>
       </div>
