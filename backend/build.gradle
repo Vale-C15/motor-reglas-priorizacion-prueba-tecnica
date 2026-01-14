@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.pruebatecnica'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    // Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Estructura estándar: Gradle busca automáticamente en src/main/java/
+// No se necesita configuración personalizada de sourceSets
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// Configuración para ejecutar la aplicación
+bootRun {
+    mainClass = 'PrioritizationApplication'
+}

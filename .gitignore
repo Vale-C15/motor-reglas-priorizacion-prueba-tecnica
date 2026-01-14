@@ -22,3 +22,35 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+### Backend (Java/Gradle) ###
+backend/build/
+backend/.gradle/
+backend/target/
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/bin/
+
+### Frontend (Node/Next.js) ###
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.cache/
+frontend/dist/
+frontend/build/
+frontend/.env*.local
+frontend/.vercel
+frontend/.turbo
+
+### IDEs ###
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+### OS ###
+.DS_Store
+Thumbs.db
